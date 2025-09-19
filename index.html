@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&F Viagens</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #F5EBD6;
+            color: #233B67;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+        }
+        .testimonial-slider {
+            scroll-snap-type: x mandatory;
+        }
+        .testimonial-slide {
+            scroll-snap-align: start;
+        }
+        .heart-icon {
+            color: #D9A679;
+        }
+        .btn-primary {
+            background-color: #5BB9F3;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #3a9bd6;
+            transform: translateY(-2px);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-[#233B67] text-white py-6 px-6 shadow-md">
+        <div class="container mx-auto">
+            <div class="flex items-center">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                    <img src="logoaef.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-2xl font-bold text-center w-full">Transforme seu sonho em uma experiência real</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-16 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 flex flex-col justify-start mt-[-50px]">
+                <h2 class="text-3xl font-bold mb-6 text-[#233B67]">Quero começar minha jornada para Portugal!</h2>
+                <p class="text-xl mb-8 text-[#233B67] text-justify w-4/5">Somos Ana Paula Barros e Filipe Barros, especialistas em imigração para a Portugal.<br><br>Há quase 10 anos, auxiliamos famílias brasileiras com todo profissionalismo e suporte em todas as etapas.<br><br>Já são mais de 10 mil clientes atendidos com excelência, que hoje vivem essa nova realidade.</p>
+		<a href="https://wa.me/5511913298966"
+   		class="btn-primary text-white px-6 py-3 rounded-full text-lg font-bold
+          	inline-flex items-center gap-2 w-fit self-start whitespace-nowrap shadow-lg">
+  		QUERO VIAJAR COM PROPÓSITO
+  		<i class="fas fa-arrow-right" aria-hidden="true"></i>
+	     </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+
+<style>
+    .carrossel {
+        width: 100%;
+        max-width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .carrossel img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .carrossel img.active {
+        opacity: 1;
+    }
+</style>
+
+<div class="carrossel">
+    <img src="A&FViagens.jpg" alt="Imagem 1" class="active">
+    <img src="Portugal1.jpg" alt="Imagem 2">
+    <img src="Portugal2.jpg" alt="Imagem 3">
+    <img src="Portugal3.jpg" alt="Imagem 4">
+    <img src="Portugal4.jpg" alt="Imagem 5">
+    <img src="Portugal5.jpg" alt="Imagem 6">
+</div>
+
+<script>
+    let images = document.querySelectorAll(".carrossel img");
+    let index = 0;
+
+    function changeImage() {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+    }
+
+    setInterval(changeImage, 5000); // Muda a imagem a cada 5 segundos
+</script>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#233B67]">Por que escolher a A&F Viagens?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-lg bg-[#F5EBD6]">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Atendimento 100% Online e Humanizado</h3>
+                    <p>Oferecemos todo o suporte de forma remota, mas com o calor e cuidado de um atendimento presencial.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-[#F5EBD6]">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">+1200 Famílias atendidas com excelência</h3>
+                    <p>Nossa experiência permite que seu processo seja tranquilo e confortável para sua imigração.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-[#F5EBD6]">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Roteiros completos para Portugal</h3>
+                    <p>Criamos itinerários únicos que combinam com seu estilo de viagem e propósito.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-[#F5EBD6]">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Suporte completo com todo cuidado e planejamento</h3>
+                    <p>Além da assessoria técnica, oferecemos apoio em toda sua jornada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 px-6 bg-[#F5EBD6] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path d="M30,30 Q50,10 70,30 T90,50 T70,70 T50,90 T30,70 T10,50 T30,30" fill="none" stroke="#233B67" stroke-width="0.5"/>
+            </svg>
+        </div>
+        <div class="container mx-auto relative">
+    <h2 class="text-3xl font-bold text-center mb-12 text-[#233B67]">Depoimentos de quem realizou o sonho</h2>
+    <div class="testimonial-slider flex overflow-x-auto pb-8 scrollbar-hide">
+        <!-- Depoimento 1 -->
+        <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="Test_1.jpeg" alt="Depoimento de cliente satisfeito 1" class="w-full h-auto rounded-md">
+            </div>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="Test_2.jpeg" alt="Depoimento de cliente satisfeito 2" class="w-full h-auto rounded-md">
+            </div>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+            <div class="bg-white p-2 rounded-lg shadow-md">
+                <img src="Test_3.jpeg" alt="Depoimento de cliente satisfeito 3" class="w-full h-auto rounded-md">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Services Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#233B67]">Serviços com propósito e excelência</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card bg-[#F5EBD6] p-8 rounded-lg transition duration-300">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Assessoria para Vistos</h3>
+                    <p class="mb-6">Desde a documentação portuguesa até o agendamento de todo processo de seu visto para avaliação e aprovação.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Visto de Procura por Trabalho</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Passagens aéreas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Seguros viagem</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Suporte personalizado até seu destino</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-card bg-[#F5EBD6] p-8 rounded-lg transition duration-300">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Consultoria para Europa</h3>
+                    <p class="mb-6">Oferecemos consultorias personalizadas, roteiros turísticos e todo suporte para você sanar todas as suas dúvidas sobre a sua nova jornada.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Consultorias</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Roteiros</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Planejamento de sua viagem</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-card bg-[#F5EBD6] p-8 rounded-lg transition duration-300">
+                    <div class="heart-icon text-4xl mb-4">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Emissão de Passagens</h3>
+                    <p class="mb-6">As melhores tarifas aéreas com flexibilidade e condições especiais para sua viagem.</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Passagens internacionais</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-[#5BB9F3] mr-2 mt-1"></i>
+                            <span>Multi-destinos</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5511913298966" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-bold inline-block shadow-lg">
+                    FALE COM A GENTE <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#233B67] text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#233B67" class="w-8 h-8">
+                            <path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 011.678 0l4.993 2.498c.106.052.23.052.349 0l3.869-1.935A1.875 1.875 0 0121.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 01-1.676 0l-4.994-2.497a.375.375 0 00-.348 0l-3.868 1.935A1.875 1.875 0 012.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437zM9 6a.75.75 0 01.75.75V15a.75.75 0 01-1.5 0V6.75A.75.75 0 019 6zm6.75.75a.75.75 0 00-1.5 0V15a.75.75 0 001.5 0V6.75z" clip-rule="evenodd" />
+                            <path d="M12 6a1 1 0 100-2 1 1 0 000 2z" fill="#D9A679" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">A&F Viagens</h3>
+                        <p class="text-sm italic">Planejamos com Propósito. Conectamos com Excelência.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex items-center">
+                        <i class="fab fa-whatsapp text-2xl mr-3 text-[#5BB9F3]"></i>
+                        <div>
+                            <p class="text-sm">WhatsApp</p>
+                            <p class="font-medium">(11) 91329-8966</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-instagram text-2xl mr-3 text-[#5BB9F3]"></i>
+                        <div>
+                            <p class="text-sm">Instagram</p>
+                            <p class="font-medium">@afviagens</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-2xl mr-3 text-[#5BB9F3]"></i>
+                        <div>
+                            <p class="text-sm">E-mail</p>
+                            <p class="font-medium">anaefilipeviagens@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#5BB9F3] pt-8 text-center text-sm">
+                <p>© 2025 A&F Viagens. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            
+            // Redirect to WhatsApp with pre-filled message
+            const message = `Olá A&F Viagens! Me chamo ${name} e gostaria de mais informações sobre viagens.`;
+            const whatsappUrl = `https://wa.me/5511913298966?text=${encodeURIComponent(message)}`;
+            
+            window.location.href = whatsappUrl;
+        });
+
+        // Simple testimonial slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            if (index >= totalSlides) index = 0;
+            if (index < 0) index = totalSlides - 1;
+            
+            const slider = document.querySelector('.testimonial-slider');
+            slider.scrollTo({
+                left: slides[index].offsetLeft,
+                behavior: 'smooth'
+            });
+            
+            currentSlide = index;
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+    </script>
